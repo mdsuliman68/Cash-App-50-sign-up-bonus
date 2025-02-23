@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash App Signup Bonus</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #28a745; }
+        .container { max-width: 600px; margin: 50px auto; padding: 20px; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; }
+        h1 { color: #28a745; }
+        .cta-button { display: block; background-color: #28a745; color: white; padding: 15px; margin: 20px auto; text-decoration: none; font-size: 20px; border-radius: 5px; }
+        .steps { text-align: left; margin-top: 20px; }
+        .steps li { margin: 10px 0; }
+        .timer { font-size: 18px; color: red; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Get Up to $15 FREE on Cash App!</h1>
+        <p>Sign up now and claim your bonus instantly.</p>
+        <a href="#" class="cta-button">Claim Your Bonus Now</a>
+        <p class="timer">Offer Expires in: <span id="countdown">10:00</span></p>
+        <h2>How It Works</h2>
+        <ul class="steps">
+            <li><strong>Step 1:</strong> Click the button & download Cash App.</li>
+            <li><strong>Step 2:</strong> Sign up & enter the referral code.</li>
+            <li><strong>Step 3:</strong> Add funds & get your bonus!</li>
+        </ul>
+    </div>
+    <script>
+        let time = 600;
+        function updateTimer() {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            document.getElementById("countdown").textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            if (time > 0) time--;
+        }
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
